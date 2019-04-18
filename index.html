@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="body">
+            <div id="navigation">
+                <a href="#" data-wrapper="video" class="nav left half on">
+                    <img src="images/icon-search.svg" width="24" height="24" />
+                </a>
+                <a href="#" data-wrapper="history" class="nav right half">
+                    <img src="images/icon-history.svg" width="24" height="24" />
+                </a>
+            </div>
+            <div id="searchBar" class="wrapper on" data-wrapper="video">
+                <input id="query" type="text" placeholder="Search YouTube..." autocomplete="off" readonly="true" />
+            </div>
+            <div id="historyDetails" class="wrapper" data-wrapper="history">
+                Recent search history
+            </div>
+            <div id="wrapper-video" class="wrapper on" data-wrapper="video">
+                <div id="results"></div>
+            </div>
+            <div id="wrapper-history" class="wrapper" data-wrapper="history">
+                <div id="recent-items">
+
+                </div>
+            </div>
+            <div id="playing"><div id="player"><h3>No video selected</h3></div></div>
+            <div class="wrapper on" data-wrapper="video">
+                <table id="keypad">
+                    <tr>
+                        <td class="key clear" data-button="1">&#8635;</div>
+                        <td class="key digit" data-button="2" data-key1="a" data-key2="b" data-key3="c" data-key4="c">
+                            <i>A</i> <i>B</i> <i>C</i>
+                        </td>
+                        <td class="key digit" data-button="3" data-key1="d" data-key2="e" data-key3="f" data-key4="f">
+                            <i>D</i> <i>E</i> <i>F</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key digit" data-button="4" data-key1="g" data-key2="h" data-key3="i" data-key4="i">
+                            <i>G</i> <i>H</i> <i>I</i>
+                        </td>
+                        <td class="key digit" data-button="5" data-key1="j" data-key2="k" data-key3="l" data-key4="l">
+                            <i>J</i> <i>K</i> <i>L</i>
+                        </td>
+                        <td class="key digit" data-button="6" data-key1="m" data-key2="n" data-key3="o" data-key4="o">
+                            <i>M</i> <i>N</i> <i>O</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key digit" data-button="7" data-key1="p" data-key2="q" data-key3="r" data-key4="s">
+                            <i>P</i> <i>Q</i> <i>R</i> <i>S</i>
+                        </td>
+                        <td class="key digit" data-button="8" data-key1="t" data-key2="u" data-key3="v" data-key4="v">
+                            <i>T</i> <i>U</i> <i>V</i>
+                        </td>
+                        <td class="key digit" data-button="9" data-key1="w" data-key2="x" data-key3="y" data-key4="z">
+                            <i>W</i> <i>X</i> <i>Y</i> <i>Z</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key backspace" data-button="10">&#8678;</td>
+                        <td class="key space" data-button="11">_</td>
+                        <td class="key done" data-button="12">&#10003;</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="js/day.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/cookies.js"></script>
+        <script src="js/search.js"></script>
+        <script src="js/decimal-keyboard.js"></script>
+    </body>
+</html>

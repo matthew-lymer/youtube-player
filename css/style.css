@@ -1,0 +1,337 @@
+    html,
+    body{
+        background: #000;
+        padding: 0;
+        margin: 0;
+        font-family: 'Oxygen', sans-serif;
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /*
+        max-width: 360px;
+        max-height: 560px;
+        */
+    }
+
+    h3{
+        padding: 0 0 5px 0;
+        margin: 0;
+        font-size: 11px;
+        line-height: 14px;
+        font-weight: 400;
+    }
+
+    h4{
+        padding: 0 0 5px 0;
+        margin: 0;
+        font-size: 10px;
+        line-height: 13px;
+        font-weight: 400;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    strong{
+        font-weight: 700;
+    }
+
+    input[type='text'],
+    select{
+        box-sizing: border-box;
+        border: none;
+        outline:none;
+        height: 23px;
+        padding: 5px;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 3px
+    }
+
+    .clear{
+        clear: both;
+    }
+
+    .left{
+        float: left;
+    }
+
+    .right{
+        float: right;
+    }
+
+    .half{
+        width: 50%;
+    }
+
+    #body{
+        position: absolute;
+        width: 320px;
+        width: 100%;
+        height: 480px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #wrapper-video,
+    #wrapper-history{
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background: #ddd;
+        z-index: 1;
+        box-sizing: border-box;
+        height: calc(100% - 96px);
+    }
+
+    .wrapper{
+        display: none;
+    }
+
+    .wrapper.on{
+        display: block!important;
+    }
+
+    .wrapper.squash{
+        height: calc(100% - 276px)!important;
+    }
+
+    #searchBar,
+    #navigation,
+    #historyDetails{
+        background: #fff;
+        padding: 4px 5px 5px 5px;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        background: rgb(255,0,0);
+        color: #fff;
+        box-shadow: 0px 3px 3px -1px rgba(0,0,0,0.3);
+        z-index: 11;
+        height: 32px;
+        line-height: 32px;
+        font-size: 13px;
+    }
+
+    #historyDetails{
+        padding: 0 5px;
+        line-height: 30px;
+    }
+
+    #navigation{
+        padding: 0;
+    }
+
+    #navigation .nav{
+        height: 32px;
+        padding: 4px;
+        box-sizing: border-box;
+        background: rgba(0,0,0,0.8);
+        opacity: 0.5;
+    }
+
+    #navigation .nav.on{
+        background: none;
+        opacity: 1;
+    }
+
+    #searchBar input{
+        display: block;
+        width: 82%;
+        width: 100%;
+        background: rgba(0,0,0,0.2);
+        color: #fff;
+        float: left;
+        box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+    }
+
+    #searchBar select{
+        display: block;
+        width: calc(18% - 5px);
+        float: right;
+        background: rgba(0,0,0,0.2);
+        color: #fff;
+        box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+    }
+
+    #searchBar input::placeholder{
+        color: #fff;
+    }
+
+    #results,
+    #recent-items{
+        padding: 5px 5px 0 5px;
+    }
+
+    .result,
+    .recent{
+        background: #fff;
+        box-shadow: 0 0 3px rgba(0,0,0,0.3);
+        padding: 10px;
+        margin: 0 0 7px 0;
+    }
+
+    .recent h3{
+        padding: 0;
+    }
+
+    .result.focus{
+        box-shadow: inset 0 0 1px 2px rgb(26, 168, 251);
+        color: #fff;
+        background: #444;
+    }
+
+    .result > img{
+        width: 60px;
+        height: auto;
+        padding: 0 0 0 5px;
+        float: right;
+    }
+
+    .loader{
+        display: block;
+        margin: 0 auto;
+        padding: 50px;
+        -webkit-filter: brightness(90%) saturate(200%);
+    }
+
+    #playing{
+        background: #444;
+        position: absolute;
+        bottom:0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        color: #fff;
+        box-shadow: 0 0 3px rgba(0,0,0,0.3);
+        z-index: 9;
+        height: 32px;
+    }
+
+    #playing h3{
+        padding: 9px;
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 102px);
+        white-space: nowrap;
+    }
+
+    #playing.open{
+        height: auto;
+        height: 212px;
+    }
+
+    #playing iframe{
+        width: 100%;
+        height: 180px;
+        display: block;
+        /*
+        opacity: 0;
+        position: absolute;
+        */
+    }
+
+    #keypad{
+        width: 100%;
+        height: 300px;
+        overflow: auto;
+        background: #ddd;
+        z-index: 10;
+        left: 0;
+        bottom:32px;
+        position: absolute;
+        background: #222;
+        color: #fff;
+        vertical-align: middle;
+        text-align: center;
+        border:none;
+        border-collapse: collapse;
+        border-spacing: 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    #keypad{
+        width: 100%;
+        width: 270px;
+        height: 310px;
+        overflow: auto;
+        background: #ddd;
+        z-index: 10;
+        left: 50%;
+        margin-left: -135px;
+        bottom: 32px;
+        position: absolute;
+        background: none;
+        color: #fff;
+        vertical-align: middle;
+        text-align: center;
+        border: none;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-left: 10px solid rgba(34,34,34,0.75);
+        border-right: 10px solid rgba(34,34,34,0.75);
+        border-top: 10px solid rgba(34,34,34,0.75);
+    }
+
+    #keypad .key{
+        width: 33.33%;
+        vertical-align: middle;
+        border:1px solid #666;
+        box-sizing: border-box;
+        cursor: pointer;
+        background: #222;
+    }
+
+    #keypad .key i{
+        font-style: normal;
+        display: inline-block;
+        text-align: center;
+        border-top:2px solid transparent;
+        border-bottom:2px solid transparent;
+    }
+
+    #keypad .key i.on{
+        border-bottom:2px solid rgb(255,0,0);
+    }
+
+    #keypad .key:active{
+        background: #040404;
+    }
+
+    #sound{
+        -webkit-filter: saturate(0%) brightness(150%);
+        height: 32px;
+        width: auto;
+        padding: 0 10px 0 10px;
+        vertical-align: top;
+    }
+
+    .close{
+        height: 32px;
+        line-height: 32px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 32px;
+        text-align: center;
+        z-index: 2;
+        background: #222;
+        box-shadow: -15px 0px 10px -5px #444444;
+    }
+
+    #moreResults{
+        padding: 10px;
+        text-align: center;
+        background: red;
+        color: #fff;
+        margin: 0 0 10px 0;
+    }
